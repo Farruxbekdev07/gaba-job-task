@@ -1,3 +1,5 @@
+import { TextField } from "@mui/material";
+
 export const SearchInput = ({
   value,
   onChange,
@@ -6,10 +8,11 @@ export const SearchInput = ({
   onChange: (value: string) => void;
 }) => {
   return (
-    <input
-      type="text"
-      placeholder="Search users..."
+    <TextField
+      fullWidth
       value={value}
+      variant="outlined"
+      placeholder="Search users..."
       onChange={(e) => onChange(e.target.value)}
     />
   );
